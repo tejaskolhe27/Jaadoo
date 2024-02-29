@@ -1,7 +1,7 @@
 
 ---
 
-# Jadoo Desktop Assistant
+# Jaadoo (Powered AI Desktop Assistant)
 
 Jadoo is a Python-based desktop assistant that utilizes speech recognition and OpenAI's API to perform various tasks and engage in conversations with the user.
 
