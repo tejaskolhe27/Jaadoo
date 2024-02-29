@@ -8,7 +8,6 @@ import datetime
 
 
 chatStr = ""
-# https://youtu.be/Z3ZAJoi4x6Q
 def chat(query):
     global chatStr
     print(chatStr)
@@ -42,7 +41,7 @@ def ai(prompt):
         frequency_penalty=0,
         presence_penalty=0
     )
-    # todo: Wrap this inside of a  try catch block
+    
     # print(response["choices"][0]["text"])
     text += response["choices"][0]["text"]
     if not os.path.exists("Openai"):
@@ -74,13 +73,13 @@ if __name__ == '__main__':
     while True:
         print("Listening...")
         query = takeCommand()
-        # todo: Add more sites
+       
         sites = [["youtube", "https://www.youtube.com"], ["wikipedia", "https://www.wikipedia.com"], ["google", "https://www.google.com"],]
         for site in sites:
             if f"Open {site[0]}".lower() in query.lower():
                 say(f"Opening {site[0]} sir...")
                 webbrowser.open(site[1])
-        # todo: Add a feature to play a specific song
+    
         if "open music" in query:
             musicPath = "Downloads/downfall-21371.mp3"
             os.system(f"open {musicPath}")
@@ -109,8 +108,3 @@ if __name__ == '__main__':
             print("Chatting...")
             chat(query)
 
-
-
-
-
-        # say(query)
